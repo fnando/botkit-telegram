@@ -2,6 +2,6 @@
 
 module Botkit
   module Telegram
-    VERSION = "0.0.0"
+    VERSION = "0.0.1"
   end
 end
