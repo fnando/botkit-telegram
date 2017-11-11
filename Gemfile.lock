@@ -1,0 +1,34 @@
+PATH
+  remote: .
+  specs:
+    botkit-telegram (0.0.1)
+      botkit
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aitch (1.0.2)
+      nokogiri (>= 1.6.0)
+    botkit (0.0.1)
+      aitch
+      signal
+    mini_portile2 (2.3.0)
+    minitest (5.10.3)
+    minitest-utils (0.4.0)
+      minitest
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    rake (12.2.1)
+    signal (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  botkit-telegram!
+  bundler
+  minitest-utils
+  rake
+
+BUNDLED WITH
+   1.16.0
