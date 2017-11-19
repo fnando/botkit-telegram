@@ -9,7 +9,7 @@ GEM
   specs:
     aitch (1.0.2)
       nokogiri (>= 1.6.0)
-    botkit (0.0.1)
+    botkit (0.0.5)
       aitch
       signal
     mini_portile2 (2.3.0)
@@ -18,7 +18,7 @@ GEM
       minitest
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    rake (12.2.1)
+    rake (12.3.0)
     signal (1.1.0)
 
 PLATFORMS
