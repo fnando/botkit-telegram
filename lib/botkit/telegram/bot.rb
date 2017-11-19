@@ -36,7 +36,8 @@ module Botkit
       def prepare_message(message)
         params = parse_message(message.dig("message", "text"))
         params = params.merge(raw: message,
-                              channel_id: message.dig("message", "chat", "id"))
+                              channel_id: message.dig("message", "chat", "id"),
+                              id: message.dig("message", "message_id"))
         Message.new(**params)
       end
 
