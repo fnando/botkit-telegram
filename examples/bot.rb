@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $LOAD_PATH << File.expand_path("#{__dir__}/../lib")
 require "botkit-telegram"
 
@@ -22,7 +24,8 @@ class MyBot
 
   def on_time(message)
     text = "Now is <b>#{Time.now}</b>"
-    message = Botkit::Telegram::Message.new(text: text, channel_id: message.channel_id)
+    message =
+      Botkit::Telegram::Message.new(text: text, channel_id: message.channel_id)
     chatbot.send_message(message, parse_mode: "HTML")
   end
 
@@ -37,7 +40,10 @@ class MyBot
   end
 
   def on_message(message)
-    reply = Botkit::Telegram::Message.new(text: "Sorry, but I don't know what you mean.", channel_id: message.channel_id)
+    reply = Botkit::Telegram::Message.new(
+      text: "Sorry, but I don't know what you mean.",
+      channel_id: message.channel_id
+    )
     chatbot.reply_message(message, reply)
   end
 
@@ -75,15 +81,22 @@ class MyBot
         project_uri
       ].join("\n")
 
-      chatbot.send_message(Botkit::Telegram::Message.new(text: text), parse_mode: "HTML")
+      chatbot.send_message(
+        Botkit::Telegram::Message.new(text: text),
+        parse_mode: "HTML"
+      )
     end
 
     def send_gem_not_found
-      chatbot.send_message(Botkit::Telegram::Message.new(text: "Sorry! This gem doesn't exist."))
+      chatbot.send_message(
+        Botkit::Telegram::Message.new(text: "Sorry! This gem doesn't exist.")
+      )
     end
 
     def send_error
-      chatbot.send_message(Botkit::Telegram::Message.new(text: "Sorry! Something went wrong."))
+      chatbot.send_message(
+        Botkit::Telegram::Message.new(text: "Sorry! Something went wrong.")
+      )
     end
   end
 end
