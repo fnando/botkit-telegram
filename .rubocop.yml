@@ -3,13 +3,8 @@ inherit_gem:
   rubocop-fnando: .rubocop.yml
 
 AllCops:
-  TargetRubyVersion: 2.7
-
-Metrics/MethodLength:
-  Enabled: false
+  TargetRubyVersion: 3.0
 
 Naming/FileName:
-  Enabled: false
-
-Metrics/AbcSize:
-  Enabled: false
+  Exclude:
+    - lib/botkit-telegram.rb

@@ -7,6 +7,7 @@ module Botkit
       attr_accessor :offset
 
       def initialize(api_token:)
+        super()
         @api_token = api_token
         @booted_at = Time.now.utc.to_i
         @offset = 0
