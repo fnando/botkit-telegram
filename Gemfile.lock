@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    botkit-telegram (0.0.1)
+    botkit-telegram (0.0.2)
       botkit
 
 GEM
